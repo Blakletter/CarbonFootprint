@@ -154,7 +154,7 @@ class GetStarted extends react.Component {
         return (
             <div>
                 <NavigationBar/>
-                {(this.state.hasData) ? data : data}
+                {(this.state.hasData) ? data : form}
             </div>
 
         );
