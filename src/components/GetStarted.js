@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import CustomCard from './Card'
 import Container from '@material-ui/core/Container'
 import CardColumns from 'react-bootstrap/CardColumns'
-
+import aos from 'aos'
 import Car from '../img/car.png'
 import Train from '../img/train.png'
 import Bus from '../img/bus.png'
@@ -102,7 +102,7 @@ class GetStarted extends react.Component {
     }
     render () {
 
-        const form = (  <div style={{display:'flex', marginTop:'2%',flexDirection:'column',alignItems:'center'}}>
+        const form = (  <div style={{display:'flex', marginTop:'2%',flexDirection:'column',alignItems:'center'}} data-aos="zoom-in-down" data-aos-delay="400">
                             <h1 className="text" style={{marginBottom:'1%'}}>Welcome, lets get you started.</h1>
                             <h5 className="text" style={{marginBottom:'1%'}}>Go ahead and put in where you are going.</h5>
                             <form onSubmit={this.handleSubmit} noValidate style={{display:'flex', flexDirection:'column'}}>

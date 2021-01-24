@@ -3,6 +3,7 @@ import "../quiz.css";
 import NavigationBar from "./NavigationBar";
 import Image from "react-bootstrap/Image";
 import Question from "./question";
+import aos from 'aos';
 import CardColumns from "react-bootstrap/CardColumns";
 
 function makeRed() {
@@ -27,7 +28,7 @@ class Quiz extends react.Component {
         <link rel="stylesheet" href="../App.css"></link>
 
         <div align="center" class="col-md-6-mx-auto">
-          <h1>Test your knowledge on environmental pollution!</h1>
+          <h1 data-aos="zoom-in-right" data-aos-delay="400">Test your knowledge on environmental pollution!</h1>
         </div>
         <div align="center" style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
         <div class="col-md-6 wx-auto" align="center">

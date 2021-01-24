@@ -1,6 +1,7 @@
 import react from 'react';
 import Button from 'react-bootstrap/Button';
 import "../quiz.css";
+import AOS from "aos";
 class Question extends react.Component {
     constructor(props) {
         super(props)
@@ -23,7 +24,7 @@ class Question extends react.Component {
         
         return (
 
-            <div class="form-question" style={{minWidth:'300px'}}>
+            <div class="form-question" style={{minWidth:'300px'}} data-aos="zoom-in-left" data-aos-delay="400">
                 <h4>{this.props.question}</h4>
 
                         {(this.state.answered) ? <Button style={{marginBottom:'10px'}} disabled>True</Button> : <Button style={{marginBottom:'10px'}}  onClick={() => this.handleClick(true)} >True</Button>}
