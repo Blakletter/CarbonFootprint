@@ -28,10 +28,11 @@ class Quiz extends react.Component {
         <link rel="stylesheet" href="../App.css"></link>
 
         <div align="center" class="col-md-6-mx-auto">
-          <h1 data-aos="zoom-in-right" data-aos-delay="400">Test your knowledge on environmental pollution!</h1>
+          <h1 data-aos="zoom-in-right" data-aos-delay="400" style={{marginTop:'3%'}}>Test your knowledge on environmental pollution!</h1>
         </div>
         <div align="center" style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-        <div class="col-md-6 wx-auto" align="center">
+        <div class="col-md-6 wx-auto" style={{marginTop:'3%'}} align="center">
+          
           <CardColumns style={{ display: "flex", height: "20%", marginBottom:'6%' }}>
               <Question
                 class="q1"
