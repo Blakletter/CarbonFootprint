@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image'
 import Logo from '../img/logo.png'
 import { useLocation } from 'react-router-dom'
 
+
 function NavigationBar () {
     let location = useLocation();
 
@@ -20,6 +21,7 @@ function NavigationBar () {
                 <Link style={{marginLeft:'4%', color:homeSelected}} className="text-button" to="/home">Home</Link>
                 <Link style={{marginLeft:'4%', color:getStartedSelected}} className="text-button" to="/getstarted">Get Started</Link>
                 <Link style={{marginLeft:'4%', color:aboutSelected}} className="text-button" to="/about">About</Link>
+                <Link style={{marginLeft:'4%', color:aboutSelected}} className="text-button" to="/quiz">Quiz</Link>
             </div>
             <div style={styles.center}>
                 <Image src={Logo} style={{height:'75px', marginTop:'-8px'}}></Image>
