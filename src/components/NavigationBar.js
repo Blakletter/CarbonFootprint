@@ -17,9 +17,9 @@ function NavigationBar () {
         
         <div className="navbar">
             <div style={styles.left}>
-                <Link style={{marginLeft:'40px', color:homeSelected}} className="text-button" to="/home">Home</Link>
-                <Link style={{marginLeft:'40px', color:getStartedSelected}} className="text-button" to="/getstarted">Get Started</Link>
-                <Link style={{marginLeft:'40px', color:aboutSelected}} className="text-button" to="/about">About</Link>
+                <Link style={{marginLeft:'4%', color:homeSelected}} className="text-button" to="/home">Home</Link>
+                <Link style={{marginLeft:'4%', color:getStartedSelected}} className="text-button" to="/getstarted">Get Started</Link>
+                <Link style={{marginLeft:'4%', color:aboutSelected}} className="text-button" to="/about">About</Link>
             </div>
             <div style={styles.center}>
                 <Image src={Logo} style={{height:'75px', marginTop:'-8px'}}></Image>
