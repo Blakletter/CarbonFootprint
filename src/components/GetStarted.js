@@ -14,7 +14,7 @@ import Airplane from '../img/airplane.png'
 import Hybrid from '../img/hybrid.png'
 import Motorcycle from '../img/motorcycle.png'
 import Running from '../img/running.png'
-
+import Graph from './Graph'
 const label = "kg Co2"
 const decimals = 2
 class GetStarted extends react.Component {
@@ -144,11 +144,17 @@ class GetStarted extends react.Component {
         
         
         
-        
+        const graph = (
+            <div style={{display:'flex', alignItems:'center',margin:'5%', flexDirection:'row'}}>
+                <Graph style={{marginLeft:'3%'}} />
+                <h3 className="text">While most Co2 emissions are rising, we can stop it. If my grandmother can do it, I know you can too.</h3>
+            </div>
+        )
         return (
             <div>
                 <NavigationBar/>
                 {(this.state.hasData) ? data : form}
+                {(this.state.hasData) ? graph : ''}
             </div>
 
         );
