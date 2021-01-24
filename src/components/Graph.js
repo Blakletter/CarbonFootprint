@@ -39,7 +39,7 @@ class Graph extends react.Component {
                     <h2 style={{marginBottom:'50px'}}className="text">The data on this chart represents the amount of Co2 emission each country has had per year since 1998.</h2>
                     <h5 style={{marginBottom:'50px'}}className="text">Choose your country to get started!</h5>
                     <Autocomplete
-                        onChange={(event, value) => (value.data==null) ? '': this.updateData(value.data)}
+                        onChange={(event, value) => (value==null) ? '': this.updateData(value.data)}
                         id="combo-box-demo"
                         options={countries}
                         getOptionLabel={(option) => option.country}
