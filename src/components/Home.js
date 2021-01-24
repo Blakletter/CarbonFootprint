@@ -2,6 +2,7 @@ import react from 'react'
 import NavigationBar from './NavigationBar'
 import Image from 'react-bootstrap/Image'
 import Ex1 from '../img/example1.png'
+import Ex2 from '../img/example2.png'
 
 class Home extends react.Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class Home extends react.Component {
                     <h3>How to Use:</h3>
                     <p>Go to the "Get Started" page and enter information. Then, when you submit, you will see results telling you which is your most efficient mode of transportation. Refer to the example below:</p>
                     <Image style={{width: '35%'}} src={Ex1} />
+                    <Image style={{width: '60%'}} src={Ex2} />
                 </div>
             </div>
         )
