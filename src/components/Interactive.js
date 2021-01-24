@@ -11,15 +11,7 @@ class Interactive extends react.Component {
         return (
             <div>
                 <NavigationBar />
-                <div class="parent">
-                    <div class="graph-container">
-                        <Graph />
-                    </div>
-                    <div class="text-container">
-                        <h2 className="text">The data on this chart represents the amount of Co2 emission each country has had per year since 1998.</h2>
-                    </div>
-                </div>
-                
+                <Graph />
             </div>
         )
     }

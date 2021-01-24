@@ -140,6 +140,7 @@ class GetStarted extends react.Component {
                     <CustomCard worst={this.state.worst} best={this.state.best} src={Motorcycle} header={this.state.motorcycle.toFixed(decimals)+label} title="motorcycle" body={MotorcycleQuote} bodyExpanded={MotorcycleBody}/>
                     <CustomCard worst={this.state.worst} best={this.state.best} src={Running} header={this.state.running.toFixed(decimals)+label} title="bicycle" body={BikeQuote} bodyExpanded={BikeBody}/>
                 </CardColumns>
+                <div style={{height:200}}/>
                 </div>)
         
         
@@ -153,8 +154,7 @@ class GetStarted extends react.Component {
         return (
             <div>
                 <NavigationBar/>
-                {(this.state.hasData) ? data : form}
-                {(this.state.hasData) ? graph : graph}
+                {(this.state.hasData) ? data : data}
             </div>
 
         );

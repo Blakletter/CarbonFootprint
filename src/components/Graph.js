@@ -26,21 +26,27 @@ class Graph extends react.Component {
 
     render () {
         return (
-            <div class = "graph">
-                <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
-                    <VictoryLine height={500} interpolation="natural" data={this.state.countryData} animate={{
-                        duration: 2000,
-                        onLoad: { duration: 1000 }
-                    }}/>
-                </VictoryChart>
-                <Autocomplete
-                    onChange={(event, value) => (value.data==null) ? '': this.updateData(value.data)}
-                    id="combo-box-demo"
-                    options={countries}
-                    getOptionLabel={(option) => option.country}
-                    style={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label="Combo box" variant="outlined" />}
-                />
+            <div class = "parent">
+                <div class="graph-container">
+                    <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
+                        <VictoryLine height={500} interpolation="natural" data={this.state.countryData} animate={{
+                            duration: 2000,
+                            onLoad: { duration: 1000 }
+                        }}/>
+                    </VictoryChart>
+                </div>
+                <div class="text-container">
+                    <h2 style={{marginBottom:'50px'}}className="text">The data on this chart represents the amount of Co2 emission each country has had per year since 1998.</h2>
+                    <h5 style={{marginBottom:'50px'}}className="text">Choose your country to get started!</h5>
+                    <Autocomplete
+                        onChange={(event, value) => (value.data==null) ? '': this.updateData(value.data)}
+                        id="combo-box-demo"
+                        options={countries}
+                        getOptionLabel={(option) => option.country}
+                        style={{ width: 400, height:'300' }}
+                        renderInput={(params) => <TextField {...params} label="Choose your Country" variant="outlined" />}
+                    />
+                </div>
             </div>
             )
         }

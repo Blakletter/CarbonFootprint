@@ -24,7 +24,7 @@ function NavigationBar () {
                 <Link style={{marginLeft:'4%', color:getStartedSelected}} className="text-button" to="/getstarted">Get Started</Link>
                 <Link style={{marginLeft:'4%', color:aboutSelected}} className="text-button" to="/about">About</Link>
                 <Link style={{marginLeft:'4%', color:quizSelected}} className="text-button" to="/quiz">Quiz</Link>
-                <Link style={{marginLeft:'4%', color:interactiveSelected}} className="text-button" to="/interactive">Interactive Demo</Link>
+                <Link style={{marginLeft:'4%', color:interactiveSelected}} className="text-button" to="/interactive">Emission Graph</Link>
             </div>
             <div style={styles.center}>
                 <Image src={Logo} style={{height:'75px', marginTop:'-8px'}}></Image>
