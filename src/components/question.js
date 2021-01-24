@@ -23,18 +23,14 @@ class Question extends react.Component {
         
         return (
 
-            <div class="form">
+            <div class="form-question" style={{minWidth:'300px'}}>
                 <h4>{this.props.question}</h4>
-                <table class='col-md-3 mx-auto'>
-                    <tr>
-                        <td>{(this.state.answered) ? <Button disabled>True</Button> : <Button onClick={() => this.handleClick(true)} >True</Button>}</td>
-                        <td>{(this.state.answered) ? <Button disabled>False</Button> : <Button onClick={() => this.handleClick(false)} >False</Button>}</td>
-                    </tr>
-                </table>
+
+                        {(this.state.answered) ? <Button style={{marginBottom:'10px'}} disabled>True</Button> : <Button style={{marginBottom:'10px'}}  onClick={() => this.handleClick(true)} >True</Button>}
+                        {(this.state.answered) ? <Button style={{marginBottom:'10px'}} disabled>False</Button> : <Button style={{marginBottom:'10px'}} onClick={() => this.handleClick(false)} >False</Button>}
                 
                 
-                
-                
+               
             </div>
         )
     }

@@ -29,18 +29,21 @@ class Quiz extends react.Component {
         <div align="center" class="col-md-6-mx-auto">
           <h1>Test your knowledge on environmental pollution!</h1>
         </div>
-        <div class="col-md-6 wx-auto" align="left" marginLeft="30%">
-          <CardColumns style={{ display: "flex", height: "20%" }}>
-            <Question
-              class="q1"
-              question="1. True or False. Carbon dioxide emissions must be reduced by 55% in the next ten years in order to limit the rise of global temperature of only 1.5 degree celsius or less."
-              correct={true}
-            />
-            <Question
-              class="q2"
-              question="2. Carbon dioxide is the biggest greenhouse gas, contributing 36-72 % of the greenhouse effect"
-              correct={false}
-            />
+        <div align="center" style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+        <div class="col-md-6 wx-auto" align="center">
+          <CardColumns style={{ display: "flex", height: "20%", marginBottom:'6%' }}>
+              <Question
+                class="q1"
+                question="1. True or False. Carbon dioxide emissions must be reduced by 55% in the next ten years in order to limit the rise of global temperature of only 1.5 degree celsius or less."
+                correct={true}
+              />
+              <Question
+                class="q2"
+                question="2. Carbon dioxide is the biggest greenhouse gas, contributing 36-72 % of the greenhouse effect"
+                correct={false}
+              />
+            </CardColumns>
+            <CardColumns style={{ display: "flex", height: "20%", marginBottom:'6%' }}>
             <Question
               class="q3"
               question="3. Methane has 28 times the greenhouse effect carbon dioxide has on the environment."
@@ -52,7 +55,7 @@ class Quiz extends react.Component {
               correct={false}
             />
           </CardColumns>
-          <CardColumns style={{ display: "flex" }}>
+          <CardColumns style={{ display: "flex", height: "20%", marginBottom:'6%' }}>
             <Question
               class="q5"
               question="5. Every four pounds of beef you eat contributes to as much global warming as flying from New York to London. "
@@ -63,6 +66,8 @@ class Quiz extends react.Component {
               question="6. The world average temperature is 10 degrees celsius"
               correct={false}
             />
+            </CardColumns>
+            <CardColumns style={{ display: "flex", height: "20%", marginBottom:'6%' }}>
             <Question
               class="q7"
               question="7. 60 percent of the carbon dioxide emissions become a part of the atmosphere, while the rest is absorbed by the oceans and land."
@@ -74,6 +79,7 @@ class Quiz extends react.Component {
               correct={true}
             />
           </CardColumns>
+        </div>
         </div>
       </div>
     );
