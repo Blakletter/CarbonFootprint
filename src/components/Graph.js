@@ -25,9 +25,9 @@ class Graph extends react.Component {
 
     render () {
         return (
-            <div style={{width:'50%'}}>
+            <div style={{width:'100%', display:'flex', flexDirection:'row', alignItems:'flex-end'}}>
                 <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
-                    <VictoryLine interpolation="natural" data={this.state.countryData} animate={{
+                    <VictoryLine height={500} interpolation="natural" data={this.state.countryData} animate={{
                         duration: 2000,
                         onLoad: { duration: 1000 }
                     }}/>

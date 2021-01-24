@@ -4,6 +4,7 @@ import GetStarted from './components/GetStarted'
 import About from './components/About'
 import Home from './components/Home'
 import Quiz from './components/Quiz'
+import Interactive from './components/Interactive'
 import './style.css';// Importing the Bootstrap CSS
 import {
   BrowserRouter as Router,
@@ -22,6 +23,7 @@ class App extends react.Component {
             <Route path="/getstarted" component={GetStarted}/>
             <Route path="/home" component={Home}/>
             <Route path="/quiz" component={Quiz}/>
+            <Route path="/interactive" component={Interactive}/>
             <Route path="/" component={Home}/>
           </Switch>
         </Router>
