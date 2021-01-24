@@ -102,9 +102,9 @@ class GetStarted extends react.Component {
     }
     render () {
 
-        const form = (  <div style={{display:'flex', flexDirection:'column',alignItems:'center'}}>
-                            <h2 className="text" style={{marginBottom:'3%'}}>Welcome, lets get you started.</h2>
-                            <h6 className="text" style={{marginBottom:'3%'}}>Go ahead and put in where you are going.</h6>
+        const form = (  <div style={{display:'flex', marginTop:'2%',flexDirection:'column',alignItems:'center'}}>
+                            <h1 className="text" style={{marginBottom:'1%'}}>Welcome, lets get you started.</h1>
+                            <h5 className="text" style={{marginBottom:'1%'}}>Go ahead and put in where you are going.</h5>
                             <form onSubmit={this.handleSubmit} noValidate style={{display:'flex', flexDirection:'column'}}>
                             <div className="form">
                                 <input className="input" onChange={(text) => this.setState({origin:text.target.value})} placeholder="Origin"></input>
