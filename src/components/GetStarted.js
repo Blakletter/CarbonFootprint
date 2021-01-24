@@ -40,6 +40,7 @@ class GetStarted extends react.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+    
     handleSubmit(event) {
         //This is where we contact my api
         let origin = this.state.origin
@@ -67,6 +68,9 @@ class GetStarted extends react.Component {
             this.setState({button_disabled:false});
         })
         this.setState({button_disabled:true});
+
+
+        
         event.preventDefault();
     }
     Button = () => {
