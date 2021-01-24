@@ -16,8 +16,8 @@ class App extends react.Component {
     return (
         <Router>
           <Switch>
-            <Route path="/about" component={Home}/>
-            <Route path="/" component={About}/>
+            <Route path="/about" component={About}/>
+            <Route path="/" component={Home}/>
           </Switch>
         </Router>
     );
