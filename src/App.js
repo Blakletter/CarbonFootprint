@@ -1,6 +1,7 @@
 import react from 'react'
 import './App.css';
 import Home from './components/Home'
+import About from './components/About'
 import './style.css';// Importing the Bootstrap CSS
 import {
   BrowserRouter as Router,
@@ -16,7 +17,7 @@ class App extends react.Component {
         <Router>
           <Switch>
             <Route path="/about" component={Home}/>
-            <Route path="/" component={Home}/>
+            <Route path="/" component={About}/>
           </Switch>
         </Router>
     );
