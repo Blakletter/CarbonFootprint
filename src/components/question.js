@@ -1,5 +1,6 @@
-import react from 'react'
-import Button from 'react-bootstrap/Button'
+import react from 'react';
+import Button from 'react-bootstrap/Button';
+import "../quiz.css";
 class Question extends react.Component {
     constructor(props) {
         super(props)
@@ -22,7 +23,7 @@ class Question extends react.Component {
         
         return (
 
-            <div >
+            <div class="form">
                 <h4>{this.props.question}</h4>
                 <table class='col-md-3 mx-auto'>
                     <tr>
