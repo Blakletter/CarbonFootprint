@@ -1,26 +1,51 @@
 import react from 'react'
+
 import NavigationBar from './NavigationBar'
 import Image from 'react-bootstrap/Image'
+import Question from './question'
+
+function makeRed() {
+    document.getElementsByName('q1').style.color[0] = 'red'
+}
+function makeGreen() {
+    document.getElementsByName('q1').style.color[0] = 'green'
+}
 
 class Quiz extends react.Component {
+    
     constructor(props) {
         super(props)
-    }
+      }
+      
     render() {
         return (
                 //HTML GOES HERE
+                
             <div>
                 <NavigationBar></NavigationBar>
+
+                
+                <Question question="This is a question" correct={false}/>
+                <Question question="This is a question 2" correct={true}/>
+                <Question question="This is a question 3" correct={false}/>
+                <Question question="This is a question 4" correct={true}/>
+                <link rel='stylesheet' href='../App.css'></link>
+                
                 <div align="center" class="col-md-6 mx-auto">
                     <h1>quizzie yey</h1>
                     
                 </div>
                 <div class="col-md-8 wx-auto" align='left'>
-                    <h5>1. Name the atmospheric layer closest to the ground</h5>
-                    <p>A.Troposphere</p>
-                    <p>B.Mesosphere</p>
-                    <p>C.Thermosphere </p>
-                    <p>D.Stratosphere</p>
+                    
+                    <h5 name='q1'>1. Name the atmospheric layer closest to the ground</h5>
+                    
+                    <button onClick={makeGreen}>A.Troposphere</button><br></br>
+                    <button>B.Mesosphere</button><br></br>
+                    <button>D.Stratosphere</button>
+                    <button>D.Stratosphere</button>
+
+                    
+
                     <h5>2. The most abundant gas on the earth’s atmosphere is</h5>
                     <p>A.Oxygen</p>
                     <p>B.Carbon</p>
