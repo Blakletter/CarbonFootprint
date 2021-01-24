@@ -10,7 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import react from 'react'
 import {Link} from 'react-router-dom'
-
+import Best from '../img/best.png'
+import Image from 'react-bootstrap/Image'
+import Worst from '../img/bad.png'
 const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
@@ -50,7 +52,10 @@ export default function CustomCard (props) {
         aria-expanded={expanded}
         aria-label="show more">
             <Card className={classes.root} >
-                <CardMedia className={classes.media} image={props.src} title={props.title}/>
+                {(props.best===props.title) ? <Image src={Best} style={{position:'fixed',transform:'rotate(-15deg)', marginLeft:'-30px',marginTop:'-30px', width:'120px'}}/> : '' }
+                {(props.worst===props.title) ? <Image src={Worst} style={{position:'fixed',transform:'rotate(-15deg)', marginLeft:'-30px',marginTop:'-30px', width:'95px'}}/> : '' }
+                <CardMedia className={classes.media} image={props.src} title={props.title}>
+                </CardMedia>
                 <CardHeader title={props.header}/>
                 <CardContent>
                 <Typography className={props.title} color="textSecondary" gutterBottom>

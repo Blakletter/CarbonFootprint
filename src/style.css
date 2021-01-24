@@ -27,4 +27,6 @@ body {
     border:none;
     outline-style: none;
     box-shadow: 0px 2px 2px #9E9E9E;
+}.form-control {
+    border-radius:10px;
 }
