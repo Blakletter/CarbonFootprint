@@ -29,4 +29,18 @@ body {
     box-shadow: 0px 2px 2px #9E9E9E;
 }.form-control {
     border-radius:10px;
+}.title {
+    margin-top: 40px;
+  color: #292929;
+  text-align: center;
+}.definition{
+  padding: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: justify;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #313131;
+}.chart{
+    margin-left: 30%;
 }

@@ -16,6 +16,7 @@ class NavigationBar extends react.Component {
                 <div style={styles.left}>
                     <a href="https://www.google.com/maps" className="text-button">Google Maps</a>
                     <Link style={{marginLeft:'20px'}} className="text-button" to="/about">About</Link>
+                    <Link style={{marginLeft:'20px'}} className="text-button" to="/home">Home</Link>
                 </div>
                 <div style={styles.center}>
                     <Image src={Logo} style={{height:'75px', marginTop:'-8px'}}></Image>
