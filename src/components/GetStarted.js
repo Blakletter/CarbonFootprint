@@ -14,7 +14,7 @@ import Airplane from '../img/airplane.png'
 import Hybrid from '../img/hybrid.png'
 import Motorcycle from '../img/motorcycle.png'
 import Running from '../img/running.png'
-
+import Graph from './Graph'
 const label = "kg Co2"
 const decimals = 2
 class GetStarted extends react.Component {
@@ -36,11 +36,12 @@ class GetStarted extends react.Component {
             best:"car",
             worst:'airplane',
             hasData:false,
-            mode:"driving"
+            mode:"driving",
+            miles:-1
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    
+
     handleSubmit(event) {
         //This is where we contact my api
         let origin = this.state.origin
@@ -48,6 +49,7 @@ class GetStarted extends react.Component {
         let mode = this.state.mode;
         let url = "http://localhost:8080/requestcarbonfootprint?origin="+origin+"&destination="+destination+"&mode="+mode+"&key=AIzaSyATB_BqUvfTNkWx2HEBSuUF0AolG_d88Lg"
         axios.get(url).then(res => {
+            let distance = parseInt(res.data.miles)
             console.log(res.data)
             this.setState({
                 button_disabled:false, 
@@ -60,16 +62,32 @@ class GetStarted extends react.Component {
                 running:res.data.running,
                 distance:res.data.distance,
                 time:res.data.time,
-                best:"car",
-                worst:"airplane",
-                hasData:true});
+                hasData:true
+            });
+            console.log("Distance is " + distance)
+            let best = ""
+            let worst = ""
+            if (distance < 2) {
+                best = 'bicycle'
+                worst = 'airplane'
+            } else if (distance < 200) {
+                best = 'hybrid'
+                worst = 'airplane'
+            } else if (distance < 400) {
+                best = 'train'
+                worst = 'car'
+            } else {
+                best = 'airplane'
+                worst = 'bicycle'
+            }
+
+            this.setState({best:best, worst:worst})
+
         }).catch(err => {
             console.log(err)
             this.setState({button_disabled:false});
         })
         this.setState({button_disabled:true});
-
-
         
         event.preventDefault();
     }
@@ -126,11 +144,17 @@ class GetStarted extends react.Component {
         
         
         
-        
+        const graph = (
+            <div style={{display:'flex', alignItems:'center',margin:'5%', flexDirection:'row'}}>
+                <Graph style={{marginLeft:'3%'}} />
+                <h3 className="text">While most Co2 emissions are rising, we can stop it. If my grandmother can do it, I know you can too.</h3>
+            </div>
+        )
         return (
             <div>
                 <NavigationBar/>
                 {(this.state.hasData) ? data : form}
+                {(this.state.hasData) ? graph : graph}
             </div>
 
         );
