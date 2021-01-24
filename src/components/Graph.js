@@ -48,7 +48,7 @@ class Graph extends react.Component {
                         getOptionLabel={(option) => option.country}
                         style={{ width: 400, height:'300' }}
                         renderInput={(params) => <TextField {...params} label="Choose your Country" variant="outlined" />}
-                        data-aos="fade-down" data-aos-delay="560"
+                        
                     />
                 </div>
             </div>
