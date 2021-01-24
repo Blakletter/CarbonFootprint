@@ -63,4 +63,16 @@ body {
     justify-content: center;
     flex:1;
     padding:2%;
+}.home-parent {
+    width:80%;
+    margin-top:3%;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:0px 2px 4px #9E9E9E;
+    justify-content: center;
+
+}.home-content {
+    display: flex;
+    flex-direction: rows;
 }
